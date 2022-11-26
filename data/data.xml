@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="work_order_sequence" model="ir.sequence">
+            <field name="name">Work Order</field>
+            <field name="code">work.order</field>
+            <field name="prefix">WO</field>
+            <field name="suffix"></field>
+            <field name="padding">4</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+        </record>
+    </data>
+</odoo>

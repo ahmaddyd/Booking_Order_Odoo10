@@ -1,0 +1,60 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <!--
+            <record model="ir.ui.view" id="booking_order__ahmad_yulian_dinata.list">
+              <field name="name">booking_order_AhmadYulianDinata list</field>
+              <field name="model">booking_order__ahmad_yulian_dinata.booking_order__ahmad_yulian_dinata</field>
+              <field name="arch" type="xml">
+                <tree>
+                  <field name="name"/>
+                  <field name="value"/>
+                  <field name="value2"/>
+                </tree>
+              </field>
+            </record>
+        -->
+
+        <!-- actions opening views on models -->
+        <!--
+            <record model="ir.actions.act_window" id="booking_order__ahmad_yulian_dinata.action_window">
+              <field name="name">booking_order_AhmadYulianDinata window</field>
+              <field name="res_model">booking_order__ahmad_yulian_dinata.booking_order__ahmad_yulian_dinata</field>
+              <field name="view_mode">tree,form</field>
+            </record>
+        -->
+
+        <!-- server action to the one above -->
+        <!--
+            <record model="ir.actions.server" id="booking_order__ahmad_yulian_dinata.action_server">
+              <field name="name">booking_order_AhmadYulianDinata server</field>
+              <field name="model_id" ref="model_booking_order__ahmad_yulian_dinata_booking_order__ahmad_yulian_dinata"/>
+              <field name="state">code</field>
+              <field name="code">
+                action = {
+                  "type": "ir.actions.act_window",
+                  "view_mode": "tree,form",
+                  "res_model": model._name,
+                }
+              </field>
+            </record>
+        -->
+
+        <!-- Top menu item -->
+        <!--
+            <menuitem name="booking_order_AhmadYulianDinata" id="booking_order__ahmad_yulian_dinata.menu_root"/>
+        -->
+        <!-- menu categories -->
+        <!--
+            <menuitem name="Menu 1" id="booking_order__ahmad_yulian_dinata.menu_1" parent="booking_order__ahmad_yulian_dinata.menu_root"/>
+            <menuitem name="Menu 2" id="booking_order__ahmad_yulian_dinata.menu_2" parent="booking_order__ahmad_yulian_dinata.menu_root"/>
+        -->
+        <!-- actions -->
+        <!--
+            <menuitem name="List" id="booking_order__ahmad_yulian_dinata.menu_1_list" parent="booking_order__ahmad_yulian_dinata.menu_1"
+                      action="booking_order__ahmad_yulian_dinata.action_window"/>
+            <menuitem name="Server to list" id="booking_order__ahmad_yulian_dinata" parent="booking_order__ahmad_yulian_dinata.menu_2"
+                      action="booking_order__ahmad_yulian_dinata.action_server"/>
+        -->
+    </data>
+</odoo>

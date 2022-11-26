@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="cancelled_form">
+            <field name="name">cancel.workorder.form</field>
+            <field name="model">canceled.workorder</field>
+
+            <field name="arch" type="xml">
+                <form string="Reason for cancellation">
+                    <group string="Reason for cancellation">
+                        <field name="note"/>
+                    </group>
+
+                    <footer>
+                        <button name="cancelled" string="Confirm" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_cancel"
+                    name="cancelled Work Order"
+                    res_model="canceled.workorder"
+                    view_mode="form"
+                    target="new"/>
+    </data>
+</odoo>

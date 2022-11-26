@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_work_order_print">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="Booking_Order_AhmadYulian.report_wo" t-lang="doc.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+
+        <report
+                id="work_order"
+                model="work.order"
+                string="Print Work Order"
+                report_type="qweb-pdf"
+                name="Booking_Order_AhmadYulian.report_wo"/>
+    </data>
+</odoo>

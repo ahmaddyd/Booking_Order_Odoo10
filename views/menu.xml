@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem
+                id="booking_menu_main"
+                name="Booking"
+                parent="sales_team.menu_base_partner"
+                sequence="5"/>
+
+        <menuitem
+                id="booking_order_menu_categ"
+                name="Booking Order"
+                parent="booking_menu_main"
+                sequence="1"
+                action="booking_order_action"/>
+
+        <menuitem
+                id="work_order_menu_categ"
+                name="Work Order"
+                parent="booking_menu_main"
+                sequence="2"
+                action="work_order_action"/>
+
+        <menuitem
+                id="service_team_menu_categ"
+                name="Service Team"
+                parent="booking_menu_main"
+                sequence="3"
+                action="service_team_action"/>
+    </data>
+</odoo>

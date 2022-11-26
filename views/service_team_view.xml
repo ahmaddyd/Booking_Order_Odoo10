@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="service_team_tree" model="ir.ui.view">
+            <field name="name">Service Team Tree</field>
+            <field name="model">service.team</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Service Team">
+                    <field name="name"/>
+                    <field name="team_leader"/>
+                    <field name="team_members"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="service_team_form" model="ir.ui.view">
+            <field name="name">Service Team Form</field>
+            <field name="model">service.team</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Service Team">
+                    <sheet>
+                        <group string="Service Team">
+                            <field name="name"/>
+                            <field name="team_leader"/>
+                            <field name="team_members" widget="many2many_tags"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="service_team_action" model="ir.actions.act_window">
+            <field name="name">Service Team</field>
+            <field name="res_model">service.team</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Klik untuk menambahkan
+                </p>
+                <p>Tekan tombol create untuk new Service Team</p>
+            </field>
+        </record>
+    </data>
+</odoo>

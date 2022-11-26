@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_wo">
+            <t t-call="report.external_layout">
+                <t t-call="report.html_container">
+                    <t t-foreach="docs" t-as="o">
+                        <div class="page">
+                            <div class="row">
+                                <table style="width: 100%; border: 1px solid black">
+                                    <tr>
+                                        <td style="width: 100%; font-size:20px; border: 1px solid black" colspan="4">
+                                            <span t-field="o.work_order_number"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 25%; font-size:20px; border: 1px solid black">Team Name</td>
+                                        <td style="width: 25%;font-size:20px; border: 1px solid black">
+                                            <span t-field="o.booking_order_reference.team.name"/>
+                                        </td>
+                                        <td style="width: 25%;font-size:20px; border: 1px solid black">Customer</td>
+                                        <td style="width: 25%;font-size:20px; border: 1px solid black">
+                                            <span t-field="o.booking_order_reference.partner_id.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size:20px; border: 1px solid black">Booking Order Ref</td>
+                                        <td style="font-size:20px; border: 1px solid black">
+                                            <span t-field="o.booking_order_reference.name"/>
+                                        </td>
+                                        <td style="font-size:20px; border: 1px solid black">Date</td>
+                                        <td style="font-size:20px; border: 1px solid black">
+                                            <span t-field="o.date_start"/>
+                                            -
+                                            <span t-field="o.date_end"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size:20px; border: 1px solid black" colspan="4">NOTES:
+                                            <br/>
+                                            <span t-field="o.note"/>
+                                            <br/>
+                                            <br/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size:20px; border: 1px solid black" colspan="4">Signature:
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
